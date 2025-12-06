@@ -36,7 +36,7 @@ export abstract class DebuggerProvider implements vscode.DebugConfigurationProvi
     }
 
     protected getExt(): string[] {
-        const ext = ['.lua', ''];
+        const ext = ['.lua', '', '.txt'];
         const associations: any = vscode.workspace.getConfiguration("files").get("associations");
         for (const key in associations) {
             if (associations.hasOwnProperty(key)) {
